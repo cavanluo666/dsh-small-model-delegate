@@ -1,0 +1,43 @@
+{
+  "name": "dsh-small-model-delegate",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "小模型委派（省 token）：给主模型一个 delegate_small 工具，把边界清晰的子任务交给更便宜的小模型执行，只把最终结论带回主上下文；附「设置 → 小模型委派」配置页。",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "smoke-test.mjs",
+    "client-test.mjs"
+  ],
+  "scripts": {
+    "test": "node smoke-test.mjs && node client-test.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "delegation",
+    "subagent",
+    "token-saving"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  },
+  "license": "GPL-3.0-or-later"
+}
