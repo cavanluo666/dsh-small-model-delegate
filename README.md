@@ -20,7 +20,7 @@
 ## 安装
 
 ```sh
-git clone https://github.com/<your-name>/dsh-small-model-delegate.git
+git clone https://github.com/cavanluo666/dsh-small-model-delegate.git
 dsh plugin --profile web add link:./dsh-small-model-delegate
 ```
 
